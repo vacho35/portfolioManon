@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #177e89;
+  --secondary-color: #cfe0c3;
+  --third-color: #ef6013db;
+  --fourth-color: #d4c2fc;
+  --fifth-color: #8a7090;
+  --sixth-color: #1f363d;
+}
+
+/* ********************************************        Section 1  Hero       ********************************************* */
+
+.overlay-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10;
+}
+.overlay-mobile.open {
+  display: flex;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: radius;
+  border-radius: 0;
+  margin: 0 auto;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  z-index: 31;
+}
+header.open {
+  transform: initial;
+  display: flex;
+}
+header .onglets {
+  height: 35%;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+header .sous-onglets {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main-button {
+  display: none;
+}
+header a {
+  color: var(--primary-color);
+}
+.burger_container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.header__burger {
+  position: fixed;
+  /* position: absolute; */
+  display: block;
+  cursor: pointer;
+  z-index: 30;
+  top: 16px;
+  left: 16px;
+}
+header .header__nav__close {
+  display: block;
+  cursor: pointer;
+}
+.hero {
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: clamp(0.4rem, 3vw + 2.5rem, 4.9rem);
+  letter-spacing: -2px;
+  margin: 5rem auto;
+  text-align: center;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ********************************************        Section Galleries       ********************************************* */
+
+.galleries h2 {
+  margin: 1rem 0 5rem 0;
+  color: var(--primary-color);
+  text-align: center;
+}
+.card {
+  margin: 0 auto;
+}
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 31px 20px;
+}
+.card-container {
+  width: 100%;
+  height: auto;
+}
+.grid-container img {
+  height: 100%;
+  width: 100%;
+}
+
+/* ********************************************        Section About me      ********************************************* */
+
+.about {
+  padding: 4rem 0;
+}
+#circle-shape {
+  display: flex;
+  margin: 0 auto;
+  padding: 0rem 3rem 3rem 3rem;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+#circle-shape .curve {
+  width: 65%;
+  margin: 20px auto;
+}
+#circle-shape h2 {
+  margin: 2rem 0;
+}
+#circle-shape p {
+  line-height: 2rem;
+
+  padding: 0rem 0rem;
+}
+.down-button {
+  display: none;
+}
+
+/* ********************************************        Section Contact       ********************************************* */
+
+.contact-section {
+  padding: 4rem 0;
+  height: auto;
+}
+.left-box2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-content: space-around;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 0;
+}
+.contact-section {
+  flex-direction: column;
+}
+.button2 {
+  display: flex;
+}
+.img2 {
+  height: 33vh;
+}
+footer {
+  justify-content: space-between;
+  padding: 19px 0;
+}
+#up-button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  background-color: var(--primary-color);
+  bottom: 10%;
+  left: 89%;
+}
+#up-button .up-barre {
+  width: 10px;
+  height: 1.5px;
+  background-color: var(--secondary-color);
+  margin-bottom: 0.3rem;
+}
+#up-button .point {
+  width: 2.5px;
+  height: 2.5px;
+  background-color: var(--secondary-color);
+  margin-bottom: 3px;
+}
+
+/* ********************************************        Page Gallery       ********************************************* */
+
+
+.sous-sous-onglets{
+  display: flex;
+  flex-direction: column;
+}
+.sous-sous-onglets{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-left: 12px;
+}
+header .sous-onglets a {
+  font-size: clamp(0.6rem, 1vw + 1.2rem, 1.8rem);
+}
+header .sous-sous-onglets a{
+  font-size: clamp(0.1rem, 0.8vw + 0.7rem, 1.2rem);
+}
+#grid {
+  display: flex;
+  padding: 130px 1px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#nature-2 {
+  font-size: clamp(1.2rem, 2vw + 1.3rem, 2.5rem);
+  padding: 17px;
+  position: absolute;
+  top: 0;
+}
+#popup-content {
+  max-width: 80%;
+}
+.div1 {
+  margin-top: 20px;
+}
+.div2 {
+  margin-top: 20px;
+}
+header h2 {
+  top: 63px;
+  left: 107px;
+}
