@@ -61,7 +61,7 @@ header h2 {
   font-weight: 400;
   line-height: 38px;
 }
-.nav-title a {
+header .nav-title a {
   position: relative;
   display: inline-block;
 }
@@ -72,14 +72,17 @@ header .onglets {
   width: 100%;
   padding: 0 2rem;
 }
-header .sous-onglets a {
+header .sous-onglets {
+  display: none;
+}
+.sous-onglets a {
   font-size: clamp(0.6rem, 1vw + 0.7rem, 1rem);
   position: relative;
   display: inline-block;
   font-weight: 600;
   margin: 0 6px;
 }
-header .sous-onglets a::after {
+.sous-onglets a::after {
   content: "";
   display: block;
   position: absolute;
@@ -94,7 +97,7 @@ header .sous-onglets a::after {
 header .sous-onglets a:hover::after {
   transform: scaleX(1);
 }
-.sous-sous-onglets {
+header .sous-sous-onglets {
   display: none;
 }
 .header__burger {
@@ -113,6 +116,39 @@ header .header__nav__close svg {
   position: absolute;
   top: 16px;
   left: 16px;
+}
+
+
+/* **********************************************        Side Bar        ********************************************** */
+
+
+.side-bar{
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+.side-bar a{
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: clamp(0.6rem, 1vw + 0.7rem, 1rem);
+}
+.side-bar .sous-onglets{
+  display: flex;
+  flex-direction: column;
+}
+.side-bar .sous-sous-onglets{
+  display: flex;
+  flex-direction: column;
+}
+.logos {
+  display: flex;
+  gap: 2rem;
+}
+.logos img {
+  width: 30px;
+  height: auto;
 }
 
 /* ********************************************        Section 1  Hero       ********************************************* */
