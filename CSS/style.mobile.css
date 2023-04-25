@@ -247,3 +247,6 @@ header h2 {
   top: 63px;
   left: 107px;
 }
+.side-bar .sous-onglets{
+  display: none;
+}

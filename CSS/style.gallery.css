@@ -82,7 +82,7 @@ header .sous-onglets {
   font-weight: 600;
   margin: 0 6px;
 }
-.sous-onglets a::after {
+header .sous-onglets a::after {
   content: "";
   display: block;
   position: absolute;
@@ -97,7 +97,7 @@ header .sous-onglets {
 header .sous-onglets a:hover::after {
   transform: scaleX(1);
 }
-header .sous-sous-onglets {
+.sous-sous-onglets {
   display: none;
 }
 .header__burger {
@@ -107,10 +107,10 @@ header .sous-sous-onglets {
   stroke: black;
   width: 30px;
 }
-header .header__nav__close {
+.header__nav__close {
   display: none;
 }
-header .header__nav__close svg {
+.header__nav__close svg {
   stroke: var(--primary-color);
   width: 30px;
   position: absolute;
@@ -137,6 +137,15 @@ header .header__nav__close svg {
 .side-bar .sous-onglets{
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
+}
+.side-bar .sous-onglets a{
+  margin: 10px 0;
+  font-size: clamp(0.6rem, 1vw + 1.2rem, 1.3rem);
+}
+.side-bar .sous-sous-onglets a{
+  margin: 6px 0px 6px 18px;
+  font-size: clamp(0.1rem, 0.8vw + 0.7rem, 1rem);
 }
 .side-bar .sous-sous-onglets{
   display: flex;
@@ -144,13 +153,26 @@ header .header__nav__close svg {
 }
 .logos {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
 }
 .logos img {
-  width: 30px;
+  width: 20px;
   height: auto;
 }
-
+.logo1:hover {
+  content: url("/ressources/rs/insta.png");
+}
+.logo2:hover {
+  content: url("/ressources/rs/800px-Telegram_Messenger.png");
+}
+.logo3:hover {
+  content: url("/ressources/rs/facebook-logo-3-1.png");
+}
+.logo4:hover {
+  content: url("/ressources/rs/github.png");
+}
 /* ********************************************        Section 1  Hero       ********************************************* */
 
 #grid {
