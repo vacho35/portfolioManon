@@ -62,8 +62,11 @@ header h2 {
   line-height: 38px;
 }
 header .nav-title a {
-  position: relative;
+  position: fixed;
   display: inline-block;
+}
+header .nav-title a:hover {
+  color: #24afbe;
 }
 header .onglets {
   display: flex;
@@ -79,7 +82,7 @@ header .sous-onglets {
   font-size: clamp(0.6rem, 1vw + 0.7rem, 1rem);
   position: relative;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 6px;
 }
 header .sous-onglets a::after {
@@ -118,36 +121,41 @@ header .sous-onglets a:hover::after {
   left: 16px;
 }
 
-
 /* **********************************************        Side Bar        ********************************************** */
 
-
-.side-bar{
+.side-bar {
   position: fixed;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   text-decoration: none;
 }
-.side-bar a{
+.side-bar a {
   text-decoration: none;
   color: var(--primary-color);
   font-size: clamp(0.6rem, 1vw + 0.7rem, 1rem);
 }
-.side-bar .sous-onglets{
+.side-bar .sous-onglets {
   display: flex;
   flex-direction: column;
   padding-left: 2rem;
 }
-.side-bar .sous-onglets a{
+.side-bar .sous-onglets a {
   margin: 10px 0;
   font-size: clamp(0.6rem, 1vw + 1.2rem, 1.3rem);
+  font-weight: 400;
 }
-.side-bar .sous-sous-onglets a{
+.side-bar .sous-onglets a:hover {
+  color: #24afbe;
+}
+#so2 {
+  font-weight: 600;
+}
+.side-bar .sous-sous-onglets a {
   margin: 6px 0px 6px 18px;
   font-size: clamp(0.1rem, 0.8vw + 0.7rem, 1rem);
 }
-.side-bar .sous-sous-onglets{
+.side-bar .sous-sous-onglets {
   display: flex;
   flex-direction: column;
 }
@@ -227,14 +235,13 @@ header .sous-onglets a:hover::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f0f0f0;
+  color: #ffffff;
   display: none;
 }
 .grid-item:hover {
   transform: scale(1.01);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   z-index: 2; /*bug correction */
-  
 }
 
 .grid-img:hover {
@@ -295,14 +302,15 @@ header .sous-onglets a:hover::after {
 #popup-close:hover {
   background-color: orange;
 }
-.btn-nav{
+.btn-nav {
   font-size: 50px;
   color: white;
   position: absolute;
+  display: none;
 }
-#popup-bg .right{  
+#popup-bg .right {
   right: 0;
 }
-#popup-bg .left{
+#popup-bg .left {
   left: 0;
 }

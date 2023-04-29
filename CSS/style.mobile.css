@@ -204,12 +204,11 @@ footer {
 
 /* ********************************************        Page Gallery       ********************************************* */
 
-
-.sous-sous-onglets{
+.sous-sous-onglets {
   display: flex;
   flex-direction: column;
 }
-.sous-sous-onglets{
+.sous-sous-onglets {
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -218,7 +217,14 @@ footer {
 header .sous-onglets a {
   font-size: clamp(0.6rem, 1vw + 1.2rem, 1.8rem);
 }
-header .sous-sous-onglets a{
+header .sous-onglets a::after {
+  content: "";
+  display: none;
+}
+header .sous-onglets a:hover {
+  color: #24afbe;
+}
+header .sous-sous-onglets a {
   font-size: clamp(0.1rem, 0.8vw + 0.7rem, 1.2rem);
 }
 #grid {
@@ -247,6 +253,6 @@ header h2 {
   top: 63px;
   left: 107px;
 }
-.side-bar .sous-onglets{
+.side-bar .sous-onglets {
   display: none;
 }

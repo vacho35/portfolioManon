@@ -325,6 +325,12 @@ header .header__nav__close svg {
   border: 1.5px solid var(--secondary-color);
   transition: 0.2s ease-in-out;
 }
+.d1 {
+  bottom: 4%;
+}
+.d3 {
+  bottom: 6%;
+}
 .point {
   width: 3.5px;
   height: 3.5px;
