@@ -26,7 +26,7 @@
 
     <title>Ornithology Gallery</title>
   </head>
-  <body>
+  <body class="light">
     <!-- ******************** Nav Bar ********************** -->
 
     <main id="sec1" class="main">
@@ -56,14 +56,26 @@
           </h2>
           <div class="sous-onglets">
             <a href="./index.html" onclick="closeMenuMobile()">Home</a>
-            <a style="font-weight: 600" href="./index.html#sec2" onclick="closeMenuMobile()"
+            <a
+              style="font-weight: 600"
+              href="./index.html#sec2"
+              onclick="closeMenuMobile()"
               >Galleries</a
             >
             <div class="sous-sous-onglets">
-              <a href="./archeologyGallery.html" onclick="closeMenuMobile()">- Archeology</a
-              ><a style="font-weight: 600" href="./ornithologyGallery.html" onclick="closeMenuMobile()">- Ornithology</a
-              ><a href="./animalsGallery.html" onclick="closeMenuMobile()">- Animals</a>
-              <a  href="./landscapeGallery.html" onclick="closeMenuMobile()">- Landscapes</a>
+              <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+                >- Archeology</a
+              ><a
+                style="font-weight: 600"
+                href="./ornithologyGallery.html"
+                onclick="closeMenuMobile()"
+                >- Ornithology</a
+              ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+                >- Animals</a
+              >
+              <a href="./landscapeGallery.html" onclick="closeMenuMobile()"
+                >- Landscapes</a
+              >
             </div>
             <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
             <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
@@ -89,44 +101,60 @@
       </div>
     </main>
 
-<!-- ********************* SideBarre ******************* -->
+    <!-- ********************* SideBarre ******************* -->
 
-<div class="side-bar">
-  <div class="sous-onglets">
-    <a href="./index.html" onclick="closeMenuMobile()">Home</a>
-    <a id="so2" href="./index.html#sec2" onclick="closeMenuMobile()"
-      >Galleries</a
-    >
-    <div class="sous-sous-onglets">
-      <a href="./archeologyGallery.html" onclick="closeMenuMobile()">- Archeology</a
-      ><a style="font-weight: 600" href="./ornithologyGallery.html" onclick="closeMenuMobile()">- Ornithology</a
-      ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
-        >- Animals</a
-      >
-      <a href="./landscapeGallery.html" onclick="closeMenuMobile()">- Landscapes</a>
-    </div>
-    <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
-    <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
+    <div class="side-bar">
+      <div class="sous-onglets">
+        <a href="./index.html" onclick="closeMenuMobile()">Home</a>
+        <a id="so2" href="./index.html#sec2" onclick="closeMenuMobile()"
+          >Galleries</a
+        >
+        <div class="sous-sous-onglets">
+          <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+            >- Archeology</a
+          ><a
+            style="font-weight: 600"
+            href="./ornithologyGallery.html"
+            onclick="closeMenuMobile()"
+            >- Ornithology</a
+          ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+            >- Animals</a
+          >
+          <a href="./landscapeGallery.html" onclick="closeMenuMobile()"
+            >- Landscapes</a
+          >
+        </div>
+        <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
+        <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
 
-    <div class="social-network logos">
-      <img
-        class="logo1"
-        src="/ressources/rs/instaGrey.png"
-        alt="logo instagram"
-      />
-      <img
-        class="logo2"
-        src="/ressources/rs/telegramGrey.png"
-        alt="logo telegram"
-      />
-      <img
-        class="logo3"
-        src="/ressources/rs/facebookGrey.png"
-        alt="logo facebook"
-      />
+        <div class="social-network logos">
+          <img
+            class="logo1"
+            src="/ressources/rs/instaGrey.png"
+            alt="logo instagram"
+          />
+          <img
+            class="logo2"
+            src="/ressources/rs/telegramGrey.png"
+            alt="logo telegram"
+          />
+          <img
+            class="logo3"
+            src="/ressources/rs/facebookGrey.png"
+            alt="logo facebook"
+          />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- ********************* Dark Mode ******************* -->
+
+    <div class="darkmode-container">
+      <p>Light / Dark Mode</p>
+      <div class="theme-switch">
+        <div class="switch" id="switch"></div>
+      </div>
+    </div>
 
     <!-- ********************* Main ******************* -->
 
@@ -261,5 +289,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      if (localStorage.getItem("Mytheme"))
+        body.classList.toggle(localStorage.getItem("Mytheme"));
+    </script>
   </body>
 </html>

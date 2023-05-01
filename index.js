@@ -37,22 +37,20 @@ function closeMenuMobile() {
   document.querySelector(".overlay-mobile").classList.remove("open");
 }
 
-
 ////////////////////////////////         Gallery              /////////////////////////
-
 
 let allGridItems = [...document.getElementsByClassName("grid-item")];
 let popupBg = document.getElementById("popup-bg");
 let popupImg = document.getElementById("popup-img");
 
 const openPopup = (e) => {
-    let clickedImageSrc = e.target.src;
-    popupBg.classList.add("active");
-    popupImg.src = clickedImageSrc;
+  let clickedImageSrc = e.target.src;
+  popupBg.classList.add("active");
+  popupImg.src = clickedImageSrc;
 };
 
 const closePopup = () => {
-    popupBg.classList.remove("active");
+  popupBg.classList.remove("active");
 };
 
 allGridItems.forEach((el) => el.addEventListener("click", openPopup));
@@ -60,12 +58,25 @@ allGridItems.forEach((el) => el.addEventListener("click", openPopup));
 popupImg.addEventListener("click", (e) => e.stopPropagation());
 popupBg.addEventListener("click", closePopup);
 
-const items = document.querySelectorAll('img');
+////////////////////////////////         Dark Mode             /////////////////////////
+
+const items = document.querySelectorAll("img");
 const nbSlide = items.length;
-const suivant = document.querySelector('.right');
-const precedent = document.querySelector('.left');
+const suivant = document.querySelector(".right");
+const precedent = document.querySelector(".left");
 let count = 0;
 
-function slideSuivante(){
-  items[counts].classlist.remove
+function slideSuivante() {
+  items[counts].classlist.remove;
 }
+
+////////////////////////////////         Dark Mode             /////////////////////////
+
+const body = document.querySelector("body");
+const toggleMode = document.querySelector(".theme-switch");
+
+toggleMode.addEventListener("click", () => {
+  let actualTheme = body.className;
+  localStorage.setItem("Mytheme", actualTheme);
+  body.classList.toggle("dark");
+});

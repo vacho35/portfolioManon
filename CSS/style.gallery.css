@@ -5,6 +5,9 @@
   --fourth-color: #d4c2fc;
   --fifth-color: #8a7090;
   --sixth-color: #1f363d;
+  --highlight: #ff1ead;
+  --ecriture: #000;
+  --fond: #f1f1f1;
 }
 *,
 * :before,
@@ -14,7 +17,7 @@
 html,
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #f0f0f0;
+  background-color: var(--fond);
   margin: 0;
   padding: 0;
   height: auto;
@@ -35,7 +38,7 @@ p {
   font-size: clamp(0.4rem, 1.5vw + 1.1rem, 1rem);
 }
 
-/* **********************************************        Nav Bar        ********************************************** */
+/* **********************************************        Nav Bar Burger    ********************************************** */
 
 header {
   width: 100%;
@@ -181,6 +184,51 @@ header .sous-onglets a:hover::after {
 .logo4:hover {
   content: url("/ressources/rs/github.png");
 }
+/* ********************************************       Dark mode       ********************************************* */
+.darkmode-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.theme-switch {
+  width: 70px;
+  height: 30px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.switch {
+  width: 24px;
+  height: 24px;
+  background: var(--fond);
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: 0.5s all ease;
+}
+
+.dark-theme {
+  --background: #000;
+  --text: #fff;
+  background: var(--background);
+}
+body.dark {
+  color: #fff !important;
+  background: #333 !important;
+  --ecriture: #f1f1f1;
+  --fond: #000;
+  --primary-color: #f1f1f1;
+}
+body.dark .switch {
+  transform: translateX(37px);
+}
+
 /* ********************************************        Section 1  Hero       ********************************************* */
 
 #grid {
@@ -199,7 +247,7 @@ header .sous-onglets a:hover::after {
   grid-column: span 2;
 }
 #nature-2 {
-  border: solid 2px black;
+  border: solid 2px var(--ecriture);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,6 +256,7 @@ header .sous-onglets a:hover::after {
 }
 #nature-2 span {
   font-family: "Suranna", serif;
+  color: var(--ecriture);
 }
 #nature-2:hover {
   transform: none;

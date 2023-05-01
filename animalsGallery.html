@@ -26,9 +26,7 @@
 
     <title>Animals Gallery</title>
   </head>
-  <body>
-    <!-- ******************** Nav Bar ********************** -->
-
+  <body class="light">
     <!-- ******************** Nav Bar ********************** -->
 
     <main id="sec1" class="main">
@@ -148,6 +146,16 @@
         </div>
       </div>
     </div>
+
+    <!-- ********************* Dark Mode ******************* -->
+
+    <div class="darkmode-container">
+      <p>Light / Dark Mode</p>
+      <div class="theme-switch">
+        <div class="switch" id="switch"></div>
+      </div>
+    </div>
+
     <!-- ********************* Main ******************* -->
 
     <div id="popup-bg">
@@ -281,5 +289,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      if (localStorage.getItem("Mytheme"))
+        body.classList.toggle(localStorage.getItem("Mytheme"));
+    </script>
   </body>
 </html>
