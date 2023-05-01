@@ -193,18 +193,21 @@ header .sous-onglets a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 20px 10px 0;
 }
 .theme-switch {
-  width: 70px;
-  height: 30px;
-  background: var(--primary-color);
+  width: 50px;
+  height: 20px;
+  background: #177e89;
   border-radius: 50px;
   position: relative;
+  padding: 10px;
+  outline: 1px solid var(--ecriture);
   cursor: pointer;
 }
 .switch {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   background: var(--fond);
   border-radius: 100%;
   position: absolute;
@@ -212,7 +215,6 @@ header .sous-onglets a:hover::after {
   left: 4px;
   transition: 0.5s all ease;
 }
-
 .dark-theme {
   --background: #000;
   --text: #fff;
@@ -226,7 +228,7 @@ body.dark {
   --primary-color: #f1f1f1;
 }
 body.dark .switch {
-  transform: translateX(37px);
+  transform: translateX(27px);
 }
 
 /* ********************************************        Section 1  Hero       ********************************************* */

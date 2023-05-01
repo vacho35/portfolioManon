@@ -58,7 +58,7 @@ allGridItems.forEach((el) => el.addEventListener("click", openPopup));
 popupImg.addEventListener("click", (e) => e.stopPropagation());
 popupBg.addEventListener("click", closePopup);
 
-////////////////////////////////         Dark Mode             /////////////////////////
+////////////////////////////////         Slider         /////////////////////////
 
 const items = document.querySelectorAll("img");
 const nbSlide = items.length;
