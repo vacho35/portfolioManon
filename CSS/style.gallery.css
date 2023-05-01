@@ -357,11 +357,13 @@ body.dark .switch {
   font-size: 50px;
   color: white;
   position: absolute;
-  display: none;
+  cursor: pointer;
 }
 #popup-bg .right {
   right: 0;
+  z-index: 20;
 }
 #popup-bg .left {
   left: 0;
+  z-index: 20;
 }

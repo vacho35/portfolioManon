@@ -58,16 +58,16 @@ allGridItems.forEach((el) => el.addEventListener("click", openPopup));
 popupImg.addEventListener("click", (e) => e.stopPropagation());
 popupBg.addEventListener("click", closePopup);
 
-////////////////////////////////         Slider         /////////////////////////
+////////////////////////////////         Dark Mode             /////////////////////////
 
-const items = document.querySelectorAll("img");
-const nbSlide = items.length;
+const imgs = document.querySelectorAll("img");
+const nbSlide = imgs.length;
 const suivant = document.querySelector(".right");
 const precedent = document.querySelector(".left");
 let count = 0;
 
 function slideSuivante() {
-  items[counts].classlist.remove;
+  imgs[counts].classlist.remove;
 }
 
 ////////////////////////////////         Dark Mode             /////////////////////////
@@ -76,7 +76,15 @@ const body = document.querySelector("body");
 const toggleMode = document.querySelector(".theme-switch");
 
 toggleMode.addEventListener("click", () => {
-  let actualTheme = body.className;
-  localStorage.setItem("Mytheme", actualTheme);
-  body.classList.toggle("dark");
+  if(body.classList.contains('dark')){
+
+    body.classList.add('light')
+    body.classList.remove('dark')
+
+} else if(body.classList.contains('light')){
+
+    body.classList.add('dark')
+    body.classList.remove('light')
+
+}
 });
