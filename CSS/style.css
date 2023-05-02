@@ -260,7 +260,7 @@ header .header__nav__close svg {
   -ms-transform: scale(1.01); /* IE 9 */
   -webkit-transform: scale(1.01); /* Safari 3-8 */
   transform: scale(1.03);
-  opacity: 92%;
+  opacity: 98%;
 }
 .card4 {
   grid-area: 2 / 2 / 3 / 3;
@@ -291,9 +291,8 @@ header .header__nav__close svg {
 }
 #circle-shape p {
   line-height: 1.9rem;
-  font-size: clamp(0.1rem, 1vw + 0.7rem, 1.2rem);
-  padding-top: 2rem;
-  padding-right: 6rem;
+  font-size: clamp(0.1rem, 1vw + 0.7rem, 1rem);
+  padding: 2rem 16rem;
 }
 #circle-shape h2 {
   margin: 0;

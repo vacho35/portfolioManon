@@ -256,3 +256,25 @@ header h2 {
 .side-bar .sous-onglets {
   display: none;
 }
+.theme-switch {
+  width: 40px;
+  height: 16px;
+  background: #177e89;
+  border-radius: 50px;
+  position: relative;
+  outline: 1px solid var(--ecriture);
+  cursor: pointer;
+}
+.switch {
+  width: 13px;
+  height: 13px;
+  background: var(--fond);
+  border-radius: 100%;
+  position: absolute;
+  top: 1.5px;
+  left: 4px;
+  transition: 0.5s all ease;
+}
+body.dark .switch {
+  transform: translateX(19px);
+}

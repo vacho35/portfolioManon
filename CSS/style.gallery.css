@@ -6,8 +6,8 @@
   --fifth-color: #8a7090;
   --sixth-color: #1f363d;
   --highlight: #ff1ead;
-  --ecriture: #000;
-  --fond: #f1f1f1;
+  --ecriture: #333;
+  --fond: #e1e1e1;
 }
 *,
 * :before,
@@ -23,6 +23,7 @@ body {
   height: auto;
   width: 100%;
   position: relative;
+  color: var(--ecriture);
 }
 html {
   height: 100%;
@@ -110,7 +111,7 @@ header .sous-onglets a:hover::after {
   display: none;
 }
 .header__burger svg {
-  stroke: black;
+  stroke: var(--ecriture);
   width: 30px;
 }
 .header__nav__close {
@@ -186,7 +187,7 @@ header .sous-onglets a:hover::after {
 }
 /* ********************************************       Dark mode       ********************************************* */
 .darkmode-container {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
@@ -194,6 +195,11 @@ header .sous-onglets a:hover::after {
   justify-content: center;
   align-items: center;
   margin: 0 20px 10px 0;
+  z-index: 1000;
+}
+.darkmode-container p {
+  font-size: clamp(0.2rem, 0.8vw + 0.4rem, 1rem);
+  color: var(--ecriture);
 }
 .theme-switch {
   width: 50px;
@@ -201,7 +207,6 @@ header .sous-onglets a:hover::after {
   background: #177e89;
   border-radius: 50px;
   position: relative;
-  padding: 10px;
   outline: 1px solid var(--ecriture);
   cursor: pointer;
 }
@@ -211,21 +216,15 @@ header .sous-onglets a:hover::after {
   background: var(--fond);
   border-radius: 100%;
   position: absolute;
-  top: 3px;
+  top: 2.8px;
   left: 4px;
   transition: 0.5s all ease;
 }
-.dark-theme {
-  --background: #000;
-  --text: #fff;
-  background: var(--background);
-}
 body.dark {
-  color: #fff !important;
-  background: #333 !important;
-  --ecriture: #f1f1f1;
-  --fond: #000;
-  --primary-color: #f1f1f1;
+  --ecriture: #d1d1d1;
+  --fond: #333;
+  --primary-color: #d1d1d1;
+  --secondary-color: #1f363d;
 }
 body.dark .switch {
   transform: translateX(27px);
