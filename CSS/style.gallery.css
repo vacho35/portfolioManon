@@ -188,8 +188,8 @@ header .sous-onglets a:hover::after {
 /* ********************************************       Dark mode       ********************************************* */
 .darkmode-container {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.5%;
+  right: 2.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;

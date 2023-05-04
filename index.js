@@ -55,19 +55,23 @@ const closePopup = () => {
 
 allGridItems.forEach((el) => el.addEventListener("click", openPopup));
 
-popupImg.addEventListener("click", (e) => e.stopPropagation());
-popupBg.addEventListener("click", closePopup);
+// popupImg.addEventListener("click", (e) => e.stopPropagation());
+// popupBg.addEventListener("click", closePopup);
 
-////////////////////////////////         Dark Mode             /////////////////////////
+////////////////////////////////         Slider             /////////////////////////
 
+const slide = ["Carnac.JPG", "DSC_0191.JPG", "DSC_0196.JPG"];
 const imgs = document.querySelectorAll("img");
 const nbSlide = imgs.length;
-const suivant = document.querySelector(".right");
-const precedent = document.querySelector(".left");
-let count = 0;
+let numero = 0;
 
-function slideSuivante() {
-  imgs[counts].classlist.remove;
+function ChangeSlide(sens) {
+  numero = numero + sens;
+  if (numero < 0 )
+    numero = nbSlide - 1;
+  if (numero > nbSlide - 1)
+  numero = 0;
+  document.getElementById("nbSlide").src = nbSlide[numero];
 }
 
 ////////////////////////////////         Dark Mode             /////////////////////////
