@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Suranna&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cfccd0bcd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---------------- CSS ------------->
+
+    <link rel="stylesheet" href="/CSS/style.gallery.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:700px)"
+      href="/CSS/style.mobile.css"
+    />
+
+    <title>Ornithology Gallery</title>
+  </head>
+  <body class="light">
+    <!-- ******************** Nav Bar ********************** -->
+
+    <main id="sec1" class="main">
+      <div class="overlay-mobile" onclick="closeMenuMobile()"></div>
+      <header id="navbar" class="nav">
+        <div class="burger_container">
+          <div class="header__nav__close" onclick="closeMenuMobile()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="onglets">
+          <h2 class="nav-title">
+            <a href="#" onclick="closeMenuMobile()">MANON<br />VALLEE</a>
+          </h2>
+          <div class="sous-onglets">
+            <a href="./index.html" onclick="closeMenuMobile()">Home</a>
+            <a
+              style="font-weight: 600"
+              href="./index.html#sec2"
+              onclick="closeMenuMobile()"
+              >Galleries</a
+            >
+            <div class="sous-sous-onglets">
+              <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+                >- Archeology</a
+              ><a
+                style="font-weight: 600"
+                href="./ornithologyGallery.html"
+                onclick="closeMenuMobile()"
+                >- Ornithology</a
+              ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+                >- Animals</a
+              >
+              <a href="./landscapeGallery.html" onclick="closeMenuMobile()"
+                >- Landscapes</a
+              >
+            </div>
+            <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
+            <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
+          </div>
+        </div>
+      </header>
+      <div class="header__burger" onclick="openMenuMobile()">
+        <svg
+          id="burg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </main>
+
+    <!-- ********************* SideBarre ******************* -->
+
+    <div class="side-bar">
+      <div class="sous-onglets">
+        <a href="./index.html" onclick="closeMenuMobile()">Home</a>
+        <a id="so2" href="./index.html#sec2" onclick="closeMenuMobile()"
+          >Galleries</a
+        >
+        <div class="sous-sous-onglets">
+          <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+            >- Archeology</a
+          ><a
+            style="font-weight: 600"
+            href="./ornithologyGallery.html"
+            onclick="closeMenuMobile()"
+            >- Ornithology</a
+          ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+            >- Animals</a
+          >
+          <a href="./landscapeGallery.html" onclick="closeMenuMobile()"
+            >- Landscapes</a
+          >
+        </div>
+        <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
+        <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
+
+        <div class="social-network logos">
+          <img
+            class="logo1"
+            src="/ressources/rs/instaGrey.png"
+            alt="logo instagram"
+          />
+          <img
+            class="logo2"
+            src="/ressources/rs/telegramGrey.png"
+            alt="logo telegram"
+          />
+          <img
+            class="logo3"
+            src="/ressources/rs/facebookGrey.png"
+            alt="logo facebook"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ********************* Dark Mode ******************* -->
+
+    <div class="darkmode-container">
+      <p>Light / Dark Mode</p>
+      <div class="theme-switch">
+        <div class="switch" id="switch"></div>
+      </div>
+    </div>
+
+    <!-- ********************* Main ******************* -->
+
+    <!-- popup -->
+    <div class="popup">
+      <!-- top bar -->
+      <div class="top-bar">
+        <span class="output image-name"></span>
+        <div id="popup-close" class="close-btn" onclick="closePopup()">
+          <ion-icon name="close-circle"></ion-icon>
+        </div>
+      </div>
+      <!-- arrows -->
+      <div class="arrow-btn left-arrow" onclick="imagePrecedente()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <div class="arrow-btn right-arrow" onclick="imageSuivante()">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <!-- image -->
+      <img
+        src="./ressources/images/img1.png"
+        class="large-image"
+        alt=""
+        onclick="imageSuivante()"
+      />
+    </div>
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="gallery" id="grid">
+      <div class="gallery-image grid-item div1">
+        <img src="./ressources/images/img1.png" alt="" class="image grid-img" />
+        <p class="value-bird">bernache</p>
+      </div>
+      <div class="grid-item div2" id="nature-2">
+        <span>Landscapes</span>
+      </div>
+      <div class="gallery-image grid-item div3">
+        <img src="./ressources/images/img2.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div4">
+        <img src="./ressources/images/img3.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div5">
+        <img src="./ressources/images/img4.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img5.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+      <div class="gallery-image grid-item div6">
+        <img src="./ressources/images/img6.png" alt="" class="image grid-img" />
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Suranna&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cfccd0bcd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---------------- CSS ------------->
+
+    <link rel="stylesheet" href="/CSS/style.gallery.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:700px)"
+      href="/CSS/style.mobile.css"
+    />
+
+    <title>Landscape Gallery</title>
+  </head>
+  <body class="light">
+    <!-- ******************** Nav Bar ********************** -->
+
+    <main id="sec1" class="main">
+      <div class="overlay-mobile" onclick="closeMenuMobile()"></div>
+      <header id="navbar" class="nav">
+        <div class="burger_container">
+          <div class="header__nav__close" onclick="closeMenuMobile()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="onglets">
+          <h2 class="nav-title">
+            <a href="#" onclick="closeMenuMobile()">MANON<br />VALLEE</a>
+          </h2>
+          <div class="sous-onglets">
+            <a href="./index.html" onclick="closeMenuMobile()">Home</a>
+            <a
+              style="font-weight: 600"
+              href="./index.html#sec2"
+              onclick="closeMenuMobile()"
+              >Galleries</a
+            >
+            <div class="sous-sous-onglets">
+              <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+                >- Archeology</a
+              ><a href="./ornithologyGallery.html" onclick="closeMenuMobile()"
+                >- Ornithology</a
+              ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+                >- Animals</a
+              >
+              <a
+                style="font-weight: 600"
+                href="./landscapeGallery.html"
+                onclick="closeMenuMobile()"
+                >- Landscapes</a
+              >
+            </div>
+            <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
+            <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
+          </div>
+        </div>
+      </header>
+      <div class="header__burger" onclick="openMenuMobile()">
+        <svg
+          id="burg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </main>
+
+    <!-- ********************* SideBarre ******************* -->
+
+    <div class="side-bar">
+      <div class="sous-onglets">
+        <a href="./index.html" onclick="closeMenuMobile()">Home</a>
+        <a id="so2" href="./index.html#sec2" onclick="closeMenuMobile()"
+          >Galleries</a
+        >
+        <div class="sous-sous-onglets">
+          <a href="./archeologyGallery.html" onclick="closeMenuMobile()"
+            >- Archeology</a
+          ><a href="./ornithologyGallery.html" onclick="closeMenuMobile()"
+            >- Ornithology</a
+          ><a href="./animalsGallery.html" onclick="closeMenuMobile()"
+            >- Animals</a
+          >
+          <a
+            style="font-weight: 600"
+            href="./landscapeGallery.html"
+            onclick="closeMenuMobile()"
+            >- Landscapes</a
+          >
+        </div>
+        <a href="./index.html#sec3" onclick="closeMenuMobile()">About me</a>
+        <a href="./index.html#sec4" onclick="closeMenuMobile()">Contact</a>
+
+        <div class="social-network logos">
+          <img
+            class="logo1"
+            src="/ressources/rs/instaGrey.png"
+            alt="logo instagram"
+          />
+          <img
+            class="logo2"
+            src="/ressources/rs/telegramGrey.png"
+            alt="logo telegram"
+          />
+          <img
+            class="logo3"
+            src="/ressources/rs/facebookGrey.png"
+            alt="logo facebook"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ********************* Dark Mode ******************* -->
+
+    <div class="darkmode-container">
+      <p>Light / Dark Mode</p>
+      <div class="theme-switch">
+        <div class="switch" id="switch"></div>
+      </div>
+    </div>
+
+    <!-- ********************* Main ******************* -->
+
+    <div id="popup-bg">
+      <div id="popup-content">
+        <div id="popup-close">
+          <ion-icon name="close-circle"></ion-icon>
+        </div>
+        <div class="btn-nav left"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="btn-nav right"><i class="fa-solid fa-arrow-right"></i></div>
+        <img id="popup-img" src="#" alt="" />
+      </div>
+    </div>
+    <div id="grid">
+      <div class="grid-item div1" id="nature-1">
+        <img
+          src="./ressources/images/0a1c1d2f-746a-45a5-ae25-23f0cc8d876a.jpg"
+          alt=""
+          class="grid-img"
+        />
+        <p>Bernache</p>
+      </div>
+      <div class="grid-item div2" id="nature-2">
+        <span>Landscapes</span>
+      </div>
+      <div class="grid-item div3" id="nature-3">
+        <img
+          src="./ressources/images/373d77f7-a3ab-453a-8edf-378e2b329a8c.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div4" id="nature-4">
+        <img
+          src="./ressources/images/660c021d-b46c-42a2-a741-08bdf7b3ad35.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div5" id="nature-5">
+        <img
+          src="./ressources/images/99312a45-f3ff-4d17-b54d-e9cdf8f38450.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div6" id="nature-6">
+        <img
+          src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div7" id="nature-7">
+        <img
+          src="https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div8" id="nature-8">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div9" id="nature-9">
+        <img
+          src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div10" id="nature-10">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div11" id="nature-11">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div12" id="nature-12">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div13" id="nature-13">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div14" id="nature-14">
+        <img
+          src="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div15" id="nature-15">
+        <img
+          src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+      <div class="grid-item div16" id="nature-16">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+          alt=""
+          class="grid-img"
+        />
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

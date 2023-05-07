@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&family=Merriweather+Sans:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ********* CSS ********* -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:700px)"
+      href="/CSS/style.mobile.css"
+    />
+
+    <title>Portfolio de Manon Vallée</title>
+  </head>
+  <body>
+    <!-- ******************** Nav Bar ********************** -->
+
+    <!-- ********************* Main ******************* -->
+
+    <main id="sec1" class="main">
+      <div class="overlay-mobile" onclick="closeMenuMobile()"></div>
+      <header id="navbar" class="nav">
+        <div class="burger_container">
+          <div class="header__nav__close" onclick="closeMenuMobile()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="onglets">
+          <h2 class="nav-title">
+            <a href="#" onclick="closeMenuMobile()">Manon Vallée ©</a>
+          </h2>
+          <div class="sous-onglets">
+            <a href="#sec1" onclick="closeMenuMobile()">Home</a>
+            <a href="#sec2" onclick="closeMenuMobile()">Galleries</a>
+            <a href="#sec3" onclick="closeMenuMobile()">About me</a>
+            <a href="#sec4" onclick="closeMenuMobile()">Contact</a>
+          </div>
+        </div>
+      </header>
+      <div class="header__burger" onclick="openMenuMobile()">
+        <svg
+          id="burg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+
+      <!-- ******************** Hero ********************** -->
+
+      <section class="hero" id="hero">
+        <div class="title">
+          <h1>Manon Vallée<br />Portfolio</h1>
+          <button class="main-button" onclick="smoothScroll1()">
+            <div class="mini-circle">
+              <img src="/ressources/images/Vector.png" alt="" />
+            </div>
+            <span>MY GALLERY</span>
+          </button>
+        </div>
+      </section>
+      <div class="down-button d1" id="down-button d1" onclick="smoothScroll1()">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point point3"></div>
+        <div class="chevron">
+          <div class="barre barre1"></div>
+          <div class="barre barre2"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ******************** Galleries ********************** -->
+
+    <section class="galleries" id="sec2" onclick="closeMenuMobile()">
+      <div class="overlay-mobile2" onclick="closeMenuMobile()"></div>
+      <h2>GALLERIES</h2>
+      <div class="galleries-container">
+        <div class="grid-container">
+          <a class="card-container" href="./archeologyGallery.html"
+            ><div class="card">
+              <img src="/ressources/images/Archéologie/DSC_0196.JPG" alt="" />
+              <div class="card-text">
+                <h3>ARCHEOLOGY</h3>
+                <h4>See More</h4>
+              </div>
+            </div></a
+          >
+          <a class="card-container" href="./ornithologyGallery.html"
+            ><div class="card">
+              <img
+                src="/ressources/images/Oiseaux/Bernaches_cravants.JPG"
+                alt=""
+              />
+              <div class="card-text">
+                <h3>ORNITHOLOGY</h3>
+                <h4>See More</h4>
+              </div>
+            </div></a
+          >
+          <a class="card-container" href="./animalsGallery.html"
+            ><div class="card">
+              <img
+                src="/ressources/images/Animaux_rigolo/P1180616.JPG"
+                alt=""
+              />
+              <div class="card-text">
+                <h3>ANIMALS</h3>
+                <h4>See More</h4>
+              </div>
+            </div></a
+          >
+          <a class="card-container card4" href="./landscapeGallery.html"
+            ><div class="card">
+              <img
+                class="img5"
+                src="/ressources/images/Paysage/Bretagne/P1140792.JPG"
+                alt=""
+              />
+              <div class="card-text">
+                <h3>LANDSCAPES</h3>
+                <h4>See More</h4>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+      <div
+        class="down-button down-button2 d4"
+        id="d4"
+        onclick="smoothScroll2()"
+      >
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point point3"></div>
+        <div class="chevron">
+          <div class="barre barre1"></div>
+          <div class="barre barre2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************** About ********************** -->
+
+    <section class="about" id="sec3" onclick="closeMenuMobile()">
+      <div id="circle-shape">
+        <img
+          src="/ressources/images/tetevenercut.png"
+          alt="A photograph of sliced kiwifruit on a while plate"
+          class="curve"
+        />
+        <h2>ABOUT ME</h2>
+        <p>
+          I am a nature lover, archaeologist and ornithologist, I have been
+          committed to the animal cause since my childhood. This interest was
+          reflected in my phD subject on the relationship between animals and
+          protohistoric societies (2200 - 200 BC). The aim was to study the
+          place that the animals occupied in the artistic, symbolic and even
+          belief conceptions of Protohistoric societies throughout Europe. This
+          research work led me to study animals in their natural environment,
+          while questioning the mental conceptions and figurative thought of
+          past societies. I travel the world as much as possible, looking for
+          archaeological remains, landscapes and animals to observe and
+          photograph, of which here are some illustrations...
+        </p>
+      </div>
+
+      <div
+        class="down-button down-button2 d2"
+        id="down-button"
+        onclick="smoothScroll3()"
+      >
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point point3"></div>
+        <div class="chevron">
+          <div class="barre barre1"></div>
+          <div class="barre barre2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************** Contact ********************** -->
+
+    <section
+      class="contact-section section-type"
+      id="sec4"
+      onclick="closeMenuMobile()"
+    >
+      <div class="left-box left-box2">
+        <div class="form-container">
+          <div class="contact-title">
+            <h2>CONTACT</h2>
+          </div>
+          <div class="mini-mail">
+            <a href="mailto:contact@manonvallee.com">contact@manonvallee.com</a>
+          </div>
+          <form>
+            <input
+              class="input-text"
+              type="text"
+              id="name"
+              placeholder="Name"
+              required
+            /><br />
+            <input
+              class="input-text"
+              type="email"
+              id="email"
+              placeholder="Mail"
+              required
+            /><br />
+            <textarea
+              class="input-text"
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Message"
+            ></textarea>
+          </form>
+          <button
+            id="send-button"
+            onclick="sendMail()"
+            class="main-button button2"
+            href="#"
+          >
+            <div class="mini-circle mini-circle2">
+              <img src="/ressources/images/Vector.png" alt="" />
+            </div>
+            <span>Submit</span>
+          </button>
+        </div>
+      </div>
+      <div class="right-img img2"></div>
+    </section>
+
+    <!-- ******************** Footer ********************** -->
+
+    <footer onclick="closeMenuMobile()">
+      <div class="logos">
+        <img
+          class="logo1"
+          src="/ressources/rs/instaGrey.png"
+          alt="logo instagram"
+        />
+        <img
+          class="logo2"
+          src="/ressources/rs/telegramGrey.png"
+          alt="logo telegram"
+        />
+        <img
+          class="logo3"
+          src="/ressources/rs/facebookGrey.png"
+          alt="logo facebook"
+        />
+      </div>
+      <div class="copyright">
+        <p>© 2023 Copyright www.manonvallee.fr</p>
+      </div>
+      <div class="borderline">
+        <p>Design with ♥ by <a href="#">Borderline</a></p>
+        <img
+          class="logo4"
+          src="/ressources/rs/githubGrey.png"
+          alt="logo github"
+        />
+        <img
+          class="logo2"
+          src="/ressources/rs/telegramGrey.png"
+          alt="logo telegram"
+        />
+      </div>
+      <div
+        class="down-button down-button2"
+        id="up-button"
+        onclick="smoothScroll5()"
+      >
+        <div class="chevron">
+          <div class="up-barre up-barre1"></div>
+          <div class="up-barre up-barre2"></div>
+        </div>
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point point3"></div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
