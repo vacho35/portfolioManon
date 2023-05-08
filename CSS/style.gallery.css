@@ -195,7 +195,7 @@ header .sous-onglets a:hover::after {
   justify-content: center;
   align-items: center;
   margin: 0 20px 10px 0;
-  z-index: 1000;
+  z-index: 1;
 }
 .darkmode-container p {
   font-size: clamp(0.2rem, 0.8vw + 0.4rem, 1rem);
@@ -232,6 +232,19 @@ body.dark .switch {
 
 /* ********************************************        Section 1  Hero       ********************************************* */
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 76%);
+  display: none;
+  z-index: 1;
+}
+.overlay.open {
+  display: flex;
+}
 #grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -260,9 +273,11 @@ body.dark .switch {
   color: var(--ecriture);
 }
 #nature-2:hover {
-  transform: none;
-  box-shadow: none;
-  z-index: 0; /*bug correction */
+  transform: initial;
+  box-shadow: initial;
+  z-index: 1; /*bug correction */
+  transform: initial;
+  filter: initial;
 }
 .grid-item {
   overflow: hidden;
@@ -287,16 +302,16 @@ body.dark .switch {
   transform: translate(-50%, -50%);
   color: #ffffff;
   display: none;
+  filter: brightness(0%);
 }
 .grid-item:hover {
   transform: scale(1.01);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   z-index: 2; /*bug correction */
+  filter: brightness(80%);
 }
 
 .grid-img:hover {
-  transform: scale(1.01);
-  filter: brightness(50%);
 }
 
 .grid-item:hover p {
@@ -304,43 +319,81 @@ body.dark .switch {
   filter: none;
 }
 
-#popup-bg {
-  display: none;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 3;
-  justify-content: center;
-  align-items: center;
+.gallery-image {
+  height: 100%;
+  min-width: 316px;
+  overflow: hidden;
 }
 
-#popup-bg.active {
-  display: flex;
-}
-
-#popup-content {
-  max-width: 55%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#popup-img {
+.image, .animals {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+/* popup */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 83%;
+  max-width: 1600px;
+  height: 95vh;
+  max-height: 800px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  transition: 1s;
+  opacity: 0;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.popup.active .close-btn,
+.popup.active .image-name,
+.popup.active .index,
+.popup.active .large-image,
+.popup.active .arrow-btn {
+  opacity: 1;
+  transition: opacity 0.5s;
+  transition-delay: 1s;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.image-name {
+  opacity: 1;
 }
 
 #popup-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  right: 2%;
   transform: translate(50%, -50%);
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,17 +405,43 @@ body.dark .switch {
 #popup-close:hover {
   background-color: orange;
 }
-.btn-nav {
-  font-size: 50px;
-  color: white;
+.arrow-btn {
+  opacity: 0;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
   cursor: pointer;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.47);
 }
-#popup-bg .right {
-  right: 0;
-  z-index: 20;
+
+.left-arrow {
+  left: 10px;
 }
-#popup-bg .left {
-  left: 0;
-  z-index: 20;
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow-btn:hover {
+  color: white;
+}
+
+.index {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 80px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+}
+
+.large-image {
+  margin-top: 2%;
+  width: auto;
+  height: 85%;
+  object-fit: contain;
+  opacity: 0;
 }
