@@ -275,7 +275,7 @@ body.dark .switch {
 #nature-2:hover {
   transform: initial;
   box-shadow: initial;
-  z-index: 1; /*bug correction */
+  z-index: 1; 
   transform: initial;
   filter: initial;
 }
