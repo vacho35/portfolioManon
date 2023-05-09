@@ -288,22 +288,22 @@ header .header__nav__close svg {
 #circle-shape {
   font-family: "Roboto", sans-serif;
   margin: 2rem;
+  max-width: 1000px;
 }
 #circle-shape p {
   line-height: 1.9rem;
   font-size: clamp(0.1rem, 1vw + 0.7rem, 1rem);
-  padding: 2rem 16rem;
+  padding: 2rem 0rem;
 }
 #circle-shape h2 {
   margin: 0;
 }
 #circle-shape .curve {
-  width: 14%;
+  width: 220px;
   height: auto;
   min-width: 150px;
   float: left;
-  margin-right: 13rem;
-  margin-left: 8rem;
+  margin-right: 3rem;
   border-radius: 50%;
   -webkit-shape-outside: circle();
   shape-outside: circle();
@@ -416,7 +416,7 @@ header .header__nav__close svg {
   display: flex;
   flex-direction: column;
   padding: 0 15rem;
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 .left-box2 h2 {
