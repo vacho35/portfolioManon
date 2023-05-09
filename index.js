@@ -64,65 +64,65 @@ let index = 0; // will track our current image;
 
 ///////////////////////////////////    Slider Ornithology   /////////////////////////////////
 
-ornithologyImages.forEach((item, i) => {
-  item.addEventListener("click", () => {
-    updateOrnithologyImage(i);
-    popup.classList.toggle("active");
-    overlay.classList.toggle("open");
-  });
-});
-function updateOrnithologyImage(i) {
-  let path = `ressources/images/ornithology/img${i + 1}.png`;
-  largeImage.src = path;
-  imageName.innerHTML = tableauOrnithology[i];
-  index = i;
-}
-function closePopup() {
-  popup.classList.remove("active");
-  overlay.classList.remove("open");
-}
-function imagePrecedente() {
-  if (index > 0) {
-    updateOrnithologyImage(index - 1);
-  }
-}
-function imageSuivante() {
-  if (index < ornithologyImages.length - 1) {
-    updateOrnithologyImage(index + 1);
-  }
-}
+// ornithologyImages.forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     updateOrnithologyImage(i);
+//     popup.classList.toggle("active");
+//     overlay.classList.toggle("open");
+//   });
+// });
+// function updateOrnithologyImage(i) {
+//   let path = `ressources/images/ornithology/img${i + 1}.png`;
+//   largeImage.src = path;
+//   imageName.innerHTML = tableauOrnithology[i];
+//   index = i;
+// }
+// function closePopup() {
+//   popup.classList.remove("active");
+//   overlay.classList.remove("open");
+// }
+// function imagePrecedente() {
+//   if (index > 0) {
+//     updateOrnithologyImage(index - 1);
+//   }
+// }
+// function imageSuivante() {
+//   if (index < ornithologyImages.length - 1) {
+//     updateOrnithologyImage(index + 1);
+//   }
+// }
 
 
-///////////////////////////////////    Slider Landcapes   /////////////////////////////////
+// ///////////////////////////////////    Slider Landcapes   /////////////////////////////////
 
 
-landscapesImages.forEach((item, i) => {
-  item.addEventListener("click", () => {
-    updateLandscapesImage(i);
-    popup.classList.toggle("active");
-    overlay.classList.toggle("open");
-  });
-});
-function updateLandscapesImage(i) {
-  let path = `ressources/images/landscapes/img${i + 1}.png`;
-  largeImage.src = path;
-  imageName.innerHTML = tableauLandscapes[i];
-  index = i;
-}
-function closePopup() {
-  popup.classList.remove("active");
-  overlay.classList.remove("open");
-}
-function imagePrecedente() {
-  if (index > 0) {
-    updateLandscapesImage(index - 1);
-  }
-}
-function imageSuivante() {
-  if (index < landscapesImages.length - 1) {
-    updateLandscapesImage(index + 1);
-  }
-}
+// landscapesImages.forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     updateLandscapesImage(i);
+//     popup.classList.toggle("active");
+//     overlay.classList.toggle("open");
+//   });
+// });
+// function updateLandscapesImage(i) {
+//   let path = `ressources/images/landscapes/img${i + 1}.png`;
+//   largeImage.src = path;
+//   imageName.innerHTML = tableauLandscapes[i];
+//   index = i;
+// }
+// function closePopup() {
+//   popup.classList.remove("active");
+//   overlay.classList.remove("open");
+// }
+// function imagePrecedente() {
+//   if (index > 0) {
+//     updateLandscapesImage(index - 1);
+//   }
+// }
+// function imageSuivante() {
+//   if (index < landscapesImages.length - 1) {
+//     updateLandscapesImage(index + 1);
+//   }
+// }
 
 
 ///////////////////////////////////    Slider Archeology   /////////////////////////////////
@@ -136,9 +136,9 @@ archeologyImages.forEach((item, i) => {
   });
 });
 function updateArcheologyImage(i) {
-  let path = `ressources/images/archeology/img${i + 1}.png`;
-  largeImage.src = path;
-  imageName.innerHTML = tableauArcheology[i];
+  largeImage.src = archeologyImages[i].src;
+  const imageNameWithoutExt = archeologyImages[i].src.split(".")[0];
+  imageName.innerHTML = imageNameWithoutExt;
   index = i;
 }
 function closePopup() {
@@ -158,33 +158,33 @@ function imageSuivante() {
 
 ///////////////////////////////////    Slider Animals   /////////////////////////////////
 
-animalsImages.forEach((item, i) => {
-  item.addEventListener("click", () => {
-    updateAnimalsImage(i);
-    popup.classList.toggle("active");
-    overlay.classList.toggle("open");
-  });
-});
-function updateAnimalsImage(i) {
-  let path = `ressources/images/animals/img${i + 1}.png`;
-  largeImage.src = path;
-  imageName.innerHTML = tableauAnimals[i];
-  index = i;
-}
-function closePopup() {
-  popup.classList.remove("active");
-  overlay.classList.remove("open");
-}
-function imagePrecedente() {
-  if (index > 0) {
-    updateAnimalsImage(index - 1);
-  }
-}
-function imageSuivante() {
-  if (index < animalsImages.length - 1) {
-    updateAnimalsImage(index + 1);
-  }
-}
+// animalsImages.forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     updateAnimalsImage(i);
+//     popup.classList.toggle("active");
+//     overlay.classList.toggle("open");
+//   });
+// });
+// function updateAnimalsImage(i) {
+//   let path = `ressources/images/animals/img${i + 1}.png`;
+//   largeImage.src = path;
+//   imageName.innerHTML = tableauAnimals[i];
+//   index = i;
+// }
+// function closePopup() {
+//   popup.classList.remove("active");
+//   overlay.classList.remove("open");
+// }
+// function imagePrecedente() {
+//   if (index > 0) {
+//     updateAnimalsImage(index - 1);
+//   }
+// }
+// function imageSuivante() {
+//   if (index < animalsImages.length - 1) {
+//     updateAnimalsImage(index + 1);
+//   }
+// }
 
 ////////////////////////////////         Dark Mode             /////////////////////////
 

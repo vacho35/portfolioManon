@@ -351,7 +351,7 @@ body.dark .switch {
   z-index: 5;
   overflow: hidden;
   transition: 1s;
-  opacity: 0;
+  opacity: 1;
 }
 
 .popup.active {
