@@ -104,9 +104,12 @@ landscapesImages.forEach((item, i) => {
 });
 function updateLandscapesImage(i) {
   largeImage.src = landscapesImages[i].src;
-  imageName.innerHTML = landscapesImages[i].src.split('/').pop().replace('.png', '');
+  imageName.innerHTML = landscapesImages[i].src.split('/').pop()
+  .replace('.webp', '')
+  .replace('.png', '');
   index = i;
 }
+
 function closePopup() {
   popup.classList.remove("active");
   overlay.classList.remove("open");
