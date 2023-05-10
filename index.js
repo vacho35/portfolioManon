@@ -69,7 +69,19 @@ ornithologyImages.forEach((item, i) => {
 });
 function updateOrnithologyImage(i) {
   largeImage.src = ornithologyImages[i].src;
-  imageName.innerHTML = ornithologyImages[i].src.split('/').pop().replace('.png', '');
+  imageName.innerHTML = ornithologyImages[i].src
+    .split("/")
+    .pop()
+    .replace(".webp", "")
+    .replace("_", " ")
+    .replace("_", " ")
+    .replace(/\d+/g, " ")
+    .replace(/é/g, "&#233;")
+    .replace(/è/g, "&#232;")
+    .replace(/ê/g, "&#234;")
+    .replace(/à/g, "&#224;")
+    .replace(/ô/g, "&#244;")
+    .replace(/ç/g, "&#231;");
   index = i;
 }
 function closePopup() {
@@ -91,9 +103,7 @@ function imageOrnithologySuivante() {
   }
 }
 
-
 // ///////////////////////////////////    Slider Landcapes   /////////////////////////////////
-
 
 landscapesImages.forEach((item, i) => {
   item.addEventListener("click", () => {
@@ -104,9 +114,19 @@ landscapesImages.forEach((item, i) => {
 });
 function updateLandscapesImage(i) {
   largeImage.src = landscapesImages[i].src;
-  imageName.innerHTML = landscapesImages[i].src.split('/').pop()
-  .replace('.webp', '')
-  .replace('.png', '');
+  imageName.innerHTML = landscapesImages[i].src
+    .split("/")
+    .pop()
+    .replace(".webp", "")
+    .replace("_", " ")
+    .replace("_", " ")
+    .replace(/\d+/g, " ")
+    .replace(/é/g, "&#233;")
+    .replace(/è/g, "&#232;")
+    .replace(/ê/g, "&#234;")
+    .replace(/à/g, "&#224;")
+    .replace(/ô/g, "&#244;")
+    .replace(/ç/g, "&#231;");
   index = i;
 }
 
@@ -129,10 +149,7 @@ function imageLandscapesSuivante() {
   }
 }
 
-
-
 ///////////////////////////////////    Slider Archeology   /////////////////////////////////
-
 
 archeologyImages.forEach((item, i) => {
   item.addEventListener("click", () => {
@@ -143,7 +160,19 @@ archeologyImages.forEach((item, i) => {
 });
 function updateArcheologyImage(i) {
   largeImage.src = archeologyImages[i].src;
-  imageName.innerHTML = archeologyImages[i].src.split('/').pop().replace('.png', '');
+  imageName.innerHTML = archeologyImages[i].src
+    .split("/")
+    .pop()
+    .replace(".webp", "")
+    .replace("_", " ")
+    .replace("_", " ")
+    .replace(/\d+/g, " ")
+    .replace(/é/g, "&#233;")
+    .replace(/è/g, "&#232;")
+    .replace(/ê/g, "&#234;")
+    .replace(/à/g, "&#224;")
+    .replace(/ô/g, "&#244;")
+    .replace(/ç/g, "&#231;");
   index = i;
 }
 function closePopup() {
@@ -176,8 +205,20 @@ animalsImages.forEach((item, i) => {
 });
 function updateAnimalsImage(i) {
   largeImage.src = animalsImages[i].src;
-  imageName.innerHTML = animalsImages[i].src.split('/').pop().replace('.png', '');
-  index = i;
+  imageName.innerHTML = animalsImages[i].src
+  .split("/")
+  .pop()
+  .replace(".webp", "")
+  .replace("_", " ")
+  .replace("_", " ")
+  .replace(/\d+/g, " ")
+  .replace(/é/g, "&#233;")
+  .replace(/è/g, "&#232;")
+  .replace(/ê/g, "&#234;")
+  .replace(/à/g, "&#224;")
+  .replace(/ô/g, "&#244;")
+  .replace(/ç/g, "&#231;");
+index = i;
 }
 function closePopup() {
   popup.classList.remove("active");
