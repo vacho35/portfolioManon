@@ -308,7 +308,6 @@ body.dark .switch {
   transform: scale(1.01);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   z-index: 2; /*bug correction */
-  filter: brightness(80%);
 }
 
 .grid-img:hover {
@@ -359,7 +358,7 @@ body.dark .switch {
 .popup.active .arrow-btn {
   opacity: 1;
   transition: opacity 0.5s;
-  transition-delay: 1s;  
+  transition-delay: 1s;
 }
 
 .top-bar {

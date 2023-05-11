@@ -69,12 +69,15 @@ header a {
 }
 .header__burger {
   position: fixed;
-  /* position: absolute; */
   display: block;
   cursor: pointer;
   z-index: 30;
   top: 16px;
   left: 16px;
+}
+.header__burger svg {
+  stroke: #949393;
+  width: 30px;
 }
 header .header__nav__close {
   display: block;
@@ -107,14 +110,14 @@ header .header__nav__close {
 }
 .grid-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 31px 20px;
+  flex-wrap: wrap;
 }
 .card-container {
-  width: 100%;
+  width: 40%;
   height: auto;
 }
 .grid-container img {
@@ -128,17 +131,16 @@ header .header__nav__close {
   padding: 4rem 0;
 }
 #circle-shape {
-  display: flex;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 0rem 3rem 3rem 3rem;
+  padding: 3rem 0;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
 }
 #circle-shape .curve {
-  width: 65%;
-  margin: 20px auto;
+  width: 25%;
 }
 #circle-shape h2 {
   margin: 2rem 0;
@@ -161,21 +163,18 @@ header .header__nav__close {
 .left-box2 {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 40%;
   height: auto;
   align-content: space-around;
   align-items: center;
   margin-bottom: 4rem;
   padding: 0;
 }
-.contact-section {
-  flex-direction: column;
-}
 .button2 {
   display: flex;
 }
 .img2 {
-  height: 33vh;
+  height: 50vh;
 }
 footer {
   justify-content: space-between;
@@ -228,43 +227,39 @@ header .sous-sous-onglets a {
   font-size: clamp(0.1rem, 0.8vw + 0.7rem, 1.2rem);
 }
 .header__burger svg {
-  stroke: #949393;
+  stroke: var(--sixth-color: #1f363d);
   width: 30px;
 }
 .arrow-btn {
   font-size: 1.8rem;
-  padding: 0;
+  padding: 55px;
 }
-#grid {
-  display: flex;
-  padding: 130px 1px;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-#nature-2 {
-  font-size: clamp(1.2rem, 2vw + 1.3rem, 2.5rem);
-  padding: 17px;
-  position: absolute;
-  top: 0;
-}
+
 .popup {
   width: 100%;
   height: 100vh;
   border-radius: initial;
 }
 
+element.style {
+}
+.popup.active .close-btn,
+.popup.active .image-name,
+.popup.active .index,
+.popup.active .large-image,
+.popup.active .arrow-btn {
+  opacity: 1;
+  transition: opacity 0.5s;
+  transition-delay: 1s;
+}
+.large-image {
+  height: 95%;
+}
 #popup-content {
   max-width: 80%;
 }
 #popup-close {
-  right: 7%;
-}
-.div1 {
-  margin-top: 20px;
-}
-.div2 {
-  margin-top: 20px;
+  right: 4%;
 }
 header h2 {
   top: 63px;
