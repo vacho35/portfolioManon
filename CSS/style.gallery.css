@@ -359,7 +359,7 @@ body.dark .switch {
 .popup.active .arrow-btn {
   opacity: 1;
   transition: opacity 0.5s;
-  transition-delay: 1s;
+  transition-delay: 1s;  
 }
 
 .top-bar {
@@ -367,16 +367,19 @@ body.dark .switch {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background: #000;
   color: #fff;
-  text-align: center;
-  line-height: 50px;
+  display: flex;
   font-weight: 300;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-name {
   opacity: 1;
+  font-size: 1.3rem;
 }
 
 #popup-close {

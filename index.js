@@ -69,19 +69,9 @@ ornithologyImages.forEach((item, i) => {
 });
 function updateOrnithologyImage(i) {
   largeImage.src = ornithologyImages[i].src;
-  imageName.innerHTML = ornithologyImages[i].src
-    .split("/")
-    .pop()
-    .replace(".webp", "")
-    .replace("_", " ")
-    .replace("_", " ")
-    .replace(/\d+/g, " ")
-    .replace(/é/g, "&#233;")
-    .replace(/è/g, "&#232;")
-    .replace(/ê/g, "&#234;")
-    .replace(/à/g, "&#224;")
-    .replace(/ô/g, "&#244;")
-    .replace(/ç/g, "&#231;");
+  let encodedFilename = ornithologyImages[i].src.split('/').pop().replace(/\.(png|webp|JPG)/i, '');
+  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
+  imageName.innerHTML = decodedFilename.replace(/\d/g, '').replace(/_/g, ' '); // Remplacer tous les _ par un espace
   index = i;
 }
 function closePopup() {
@@ -114,19 +104,9 @@ landscapesImages.forEach((item, i) => {
 });
 function updateLandscapesImage(i) {
   largeImage.src = landscapesImages[i].src;
-  imageName.innerHTML = landscapesImages[i].src
-    .split("/")
-    .pop()
-    .replace(".webp", "")
-    .replace("_", " ")
-    .replace("_", " ")
-    .replace(/\d+/g, " ")
-    .replace(/é/g, "&#233;")
-    .replace(/è/g, "&#232;")
-    .replace(/ê/g, "&#234;")
-    .replace(/à/g, "&#224;")
-    .replace(/ô/g, "&#244;")
-    .replace(/ç/g, "&#231;");
+  let encodedFilename = landscapesImages[i].src.split('/').pop().replace(/\.(png|webp|JPG)/i, '');
+  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
+  imageName.innerHTML = decodedFilename.replace(/\d/g, '').replace(/_/g, ' '); // Remplacer tous les _ par un espace
   index = i;
 }
 
@@ -160,19 +140,9 @@ archeologyImages.forEach((item, i) => {
 });
 function updateArcheologyImage(i) {
   largeImage.src = archeologyImages[i].src;
-  imageName.innerHTML = archeologyImages[i].src
-    .split("/")
-    .pop()
-    .replace(".webp", "")
-    .replace("_", " ")
-    .replace("_", " ")
-    .replace(/\d+/g, " ")
-    .replace(/é/g, "&#233;")
-    .replace(/è/g, "&#232;")
-    .replace(/ê/g, "&#234;")
-    .replace(/à/g, "&#224;")
-    .replace(/ô/g, "&#244;")
-    .replace(/ç/g, "&#231;");
+  let encodedFilename = archeologyImages[i].src.split('/').pop().replace(/\.(png|webp|JPG)/i, '');
+  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
+  imageName.innerHTML = decodedFilename.replace(/\d/g, '').replace(/_/g, ' '); // Remplacer tous les _ par un espace
   index = i;
 }
 function closePopup() {
@@ -205,20 +175,10 @@ animalsImages.forEach((item, i) => {
 });
 function updateAnimalsImage(i) {
   largeImage.src = animalsImages[i].src;
-  imageName.innerHTML = animalsImages[i].src
-  .split("/")
-  .pop()
-  .replace(".webp", "")
-  .replace("_", " ")
-  .replace("_", " ")
-  .replace(/\d+/g, " ")
-  .replace(/é/g, "&#233;")
-  .replace(/è/g, "&#232;")
-  .replace(/ê/g, "&#234;")
-  .replace(/à/g, "&#224;")
-  .replace(/ô/g, "&#244;")
-  .replace(/ç/g, "&#231;");
-index = i;
+  let encodedFilename = animalsImages[i].src.split('/').pop().replace(/\.(png|webp|JPG)/i, '');
+  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
+  imageName.innerHTML = decodedFilename.replace(/\d/g, '').replace(/_/g, ' '); // Remplacer tous les _ par un espace
+  index = i;
 }
 function closePopup() {
   popup.classList.remove("active");

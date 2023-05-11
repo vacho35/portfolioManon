@@ -214,8 +214,8 @@ header .header__nav__close svg {
 }
 .grid-container img {
   height: 100%;
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 .galleries h2 {
   margin: 0 0 2rem 6rem;
