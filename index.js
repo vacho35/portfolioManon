@@ -326,18 +326,6 @@ loadVisibleImages();
 
 ////////////////////////////////         Dark Mode             /////////////////////////
 
-const imgs = document.querySelectorAll("img");
-const nbSlide = imgs.length;
-const suivant = document.querySelector(".right");
-const precedent = document.querySelector(".left");
-let count = 0;
-
-function slideSuivante() {
-  imgs[counts].classlist.remove;
-}
-
-////////////////////////////////         Dark Mode             /////////////////////////
-
 const body = document.querySelector("body");
 const toggleMode = document.querySelector(".theme-switch");
 
