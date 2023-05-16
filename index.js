@@ -240,32 +240,30 @@ toggleMode.addEventListener("click", () => {
 
 ////////////////////////////////         Lazy Loading             /////////////////////////
 
-// const images = document.querySelectorAll("[data-src");
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  var triggerMargin = 200; // Marge de déclenchement en pixels
+  return (
+    rect.top >= -triggerMargin &&
+    rect.left >= -triggerMargin &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + triggerMargin &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) + triggerMargin
+  );
+}
 
-// function preloadImage(img) {
-//   const src = img.getAttribute("data-src");
-//   if (!src) {
-//     return;
-//   }
-//   img.src = src;
-// }
+// Fonction pour charger les images visibles
+function loadVisibleImages() {
+  var lazyImages = document.querySelectorAll('.lazy-image');
+  lazyImages.forEach(function (image) {
+    if (isElementInViewport(image)) {
+      image.setAttribute('src', image.getAttribute('data-src'));
+      image.style.opacity = '1';
+    }
+  });
+}
 
-// const imgOptions = {
-//   threshold: 0,
-//   rootMargin: "0px 0px 300px 0px",
-// };
+// Charger les images visibles au chargement initial
+window.addEventListener('load', loadVisibleImages);
 
-// const imgObserver = new IntersectionObserver((entries, imgObserver) => {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) {
-//       return;
-//     } else {
-//       preloadImage(entry.target);
-//       imgObserver.unobserve(entry.target);
-//     }
-//   });
-// }, imgOptions);
-
-// images.forEach((image) => {
-//   imgObserver.observe(image);
-// });
+// Charger les images visibles lors du défilement
+window.addEventListener('scroll', loadVisibleImages);
