@@ -68,13 +68,11 @@ ornithologyImages.forEach((item, i) => {
   });
 });
 function updateOrnithologyImage(i) {
-  largeImage.src = ornithologyImages[i].src;
-  let encodedFilename = ornithologyImages[i].src
-    .split("/")
-    .pop()
-    .replace(/\.(png|webp|JPG)/i, "");
-  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
-  imageName.innerHTML = decodedFilename.replace(/\d/g, "").replace(/_/g, " "); // Remplacer tous les _ par un espace
+  const selectedImage = ornithologyImages[i];
+  largeImage.src = selectedImage.getAttribute('data-src');
+  largeImage.alt = selectedImage.alt;
+  let altText = selectedImage.alt;
+  imageName.innerHTML = altText.replace(/\d/g, '').replace(/_/g, ' ');
   index = i;
 }
 function closePopup() {
@@ -96,30 +94,62 @@ function imageOrnithologySuivante() {
   }
 }
 
+// Fonction pour charger les images visibles
+function loadVisibleImages() {
+  ornithologyImages.forEach((image) => {
+    if (isElementInViewport(image) && !image.hasAttribute('data-loaded')) {
+      image.setAttribute('src', image.getAttribute('data-src'));
+      image.setAttribute('data-loaded', true);
+    }
+  });
+}
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Écouter l'événement de scroll pour charger les images visibles
+window.addEventListener('scroll', loadVisibleImages);
+
+// Charger les images visibles initialement
+loadVisibleImages();
+
+
 // ///////////////////////////////////    Slider Landcapes   /////////////////////////////////
 
+// Écouter les clics sur les images
 landscapesImages.forEach((item, i) => {
-  item.addEventListener("click", () => {
+  item.addEventListener('click', () => {
     updateLandscapesImage(i);
-    popup.classList.toggle("active");
-    overlay.classList.toggle("open");
+    popup.classList.add('active');
+    overlay.classList.add('open');
   });
 });
+
+// Fonction pour mettre à jour l'image dans largeImage
 function updateLandscapesImage(i) {
-  largeImage.src = landscapesImages[i].src;
-  let encodedFilename = landscapesImages[i].src
-    .split("/")
-    .pop()
-    .replace(/\.(png|webp|JPG)/i, "");
-  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
-  imageName.innerHTML = decodedFilename.replace(/\d/g, "").replace(/_/g, " "); // Remplacer tous les _ par un espace
+  const selectedImage = landscapesImages[i];
+  largeImage.src = selectedImage.getAttribute('data-src');
+  largeImage.alt = selectedImage.alt;
+  let altText = selectedImage.alt;
+  imageName.innerHTML = altText.replace(/\d/g, '').replace(/_/g, ' ');
   index = i;
 }
 
+// Fonction pour fermer le popup
 function closePopup() {
-  popup.classList.remove("active");
-  overlay.classList.remove("open");
+  popup.classList.remove('active');
+  overlay.classList.remove('open');
 }
+
+// Fonction pour afficher l'image précédente dans largeImage
 function imageLandscapesPrecedente() {
   if (index > 0) {
     updateLandscapesImage(index - 1);
@@ -127,6 +157,8 @@ function imageLandscapesPrecedente() {
     updateLandscapesImage(landscapesImages.length - 1);
   }
 }
+
+// Fonction pour afficher l'image suivante dans largeImage
 function imageLandscapesSuivante() {
   if (index < landscapesImages.length - 1) {
     updateLandscapesImage(index + 1);
@@ -134,6 +166,34 @@ function imageLandscapesSuivante() {
     updateLandscapesImage(0);
   }
 }
+
+// Fonction pour charger les images visibles
+function loadVisibleImages() {
+  landscapesImages.forEach((image) => {
+    if (isElementInViewport(image) && !image.hasAttribute('data-loaded')) {
+      image.setAttribute('src', image.getAttribute('data-src'));
+      image.setAttribute('data-loaded', true);
+    }
+  });
+}
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Écouter l'événement de scroll pour charger les images visibles
+window.addEventListener('scroll', loadVisibleImages);
+
+// Charger les images visibles initialement
+loadVisibleImages();
+
 
 ///////////////////////////////////    Slider Archeology   /////////////////////////////////
 
@@ -145,15 +205,14 @@ archeologyImages.forEach((item, i) => {
   });
 });
 function updateArcheologyImage(i) {
-  largeImage.src = archeologyImages[i].src;
-  let encodedFilename = archeologyImages[i].src
-    .split("/")
-    .pop()
-    .replace(/\.(png|webp|JPG)/i, "");
-  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
-  imageName.innerHTML = decodedFilename.replace(/\d/g, "").replace(/_/g, " "); // Remplacer tous les _ par un espace
+  const selectedImage = archeologyImages[i];
+  largeImage.src = selectedImage.getAttribute('data-src');
+  largeImage.alt = selectedImage.alt;
+  let altText = selectedImage.alt;
+  imageName.innerHTML = altText.replace(/\d/g, '').replace(/_/g, ' ');
   index = i;
 }
+
 function closePopup() {
   popup.classList.remove("active");
   overlay.classList.remove("open");
@@ -173,6 +232,34 @@ function imageArcheologySuivante() {
   }
 }
 
+
+// Fonction pour charger les images visibles
+function loadVisibleImages() {
+  archeologyImages.forEach((image) => {
+    if (isElementInViewport(image) && !image.hasAttribute('data-loaded')) {
+      image.setAttribute('src', image.getAttribute('data-src'));
+      image.setAttribute('data-loaded', true);
+    }
+  });
+}
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Écouter l'événement de scroll pour charger les images visibles
+window.addEventListener('scroll', loadVisibleImages);
+
+// Charger les images visibles initialement
+loadVisibleImages();
+
 ///////////////////////////////////    Slider Animals   /////////////////////////////////
 
 animalsImages.forEach((item, i) => {
@@ -183,13 +270,11 @@ animalsImages.forEach((item, i) => {
   });
 });
 function updateAnimalsImage(i) {
-  largeImage.src = animalsImages[i].src;
-  let encodedFilename = animalsImages[i].src
-    .split("/")
-    .pop()
-    .replace(/\.(png|webp|JPG)/i, "");
-  let decodedFilename = decodeURIComponent(encodedFilename); // Décoder la chaîne de nom de fichier
-  imageName.innerHTML = decodedFilename.replace(/\d/g, "").replace(/_/g, " "); // Remplacer tous les _ par un espace
+  const selectedImage = animalsImages[i];
+  largeImage.src = selectedImage.getAttribute('data-src');
+  largeImage.alt = selectedImage.alt;
+  let altText = selectedImage.alt;
+  imageName.innerHTML = altText.replace(/\d/g, '').replace(/_/g, ' ');
   index = i;
 }
 function closePopup() {
@@ -210,6 +295,34 @@ function imageAnimalsSuivante() {
     updateAnimalsImage(0);
   }
 }
+
+
+// Fonction pour charger les images visibles
+function loadVisibleImages() {
+  animalsImages.forEach((image) => {
+    if (isElementInViewport(image) && !image.hasAttribute('data-loaded')) {
+      image.setAttribute('src', image.getAttribute('data-src'));
+      image.setAttribute('data-loaded', true);
+    }
+  });
+}
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Écouter l'événement de scroll pour charger les images visibles
+window.addEventListener('scroll', loadVisibleImages);
+
+// Charger les images visibles initialement
+loadVisibleImages();
 
 ////////////////////////////////         Dark Mode             /////////////////////////
 
