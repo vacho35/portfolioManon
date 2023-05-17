@@ -181,7 +181,7 @@ header .header__nav__close svg {
   border: 1px solid var(--primary-color);
 }
 .main-button:hover img {
-  content: url("/ressources/images/Vectorblue.png");
+  content: url("/ressources/images/vectorblue.png");
 }
 
 /* ********************************************        Section 2  Galleries       ********************************************* */
