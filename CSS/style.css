@@ -128,8 +128,8 @@ header .header__nav__close svg {
 /* ********************************************        Section 1  Hero       ********************************************* */
 
 .main {
-  background: url(/ressources/images/birdModif/Grive_musicienne2.jpg) no-repeat
-    center / cover;
+  background: url(/ressources/images/birdModif/grive-musicienne122.png)
+    no-repeat center / cover;
   height: 100vh;
   height: 100dvh;
   display: flex;
@@ -451,7 +451,7 @@ textarea {
   width: 50%;
   max-width: 600px;
   border-radius: 10px;
-  background: url(/ressources/images/birdModif/m1.jpg) no-repeat center / cover;
+  background: url(/ressources/images/birdModif/m2.webp) no-repeat center / cover;
 }
 .button2 {
   margin-top: 0.5rem;
