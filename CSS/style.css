@@ -4,7 +4,7 @@
   --third-color: #ef6013db;
   --fourth-color: #d4c2fc;
   --fifth-color: #8a7090;
-  --sixth-color: #1f363d;
+  --sixth-color: #2e515d;
 }
 *,
 * :before,
@@ -14,7 +14,7 @@
 html,
 body {
   font-family: "Manrope", sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  /* background: linear-gradient(#141e30, #243b55); */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
@@ -280,6 +280,8 @@ header .header__nav__close svg {
   width: 100%;
   height: auto;
   height: auto;
+  background: url(/ressources/images/Goupe\ AboutME.svg)
+    no-repeat center / cover;
   background-color: var(--secondary-color);
   color: var(--sixth-color);
   position: relative;

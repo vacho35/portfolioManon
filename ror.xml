@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://manonvallee.com/</title>
+  <link>http://manonvallee.com/</link>
+
+<item>
+     <link>https://manonvallee.com/</link>
+     <title>Portfolio de Manon Vallée</title>
+     <description>Portfolio de Manon Vallée</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://manonvallee.com/archeologyGallery.html</link>
+     <title>Archeology Gallery</title>
+     <description>Archeology Gallery</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://manonvallee.com/ornithologyGallery.html</link>
+     <title>Ornithology Gallery</title>
+     <description>Ornithology Gallery</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://manonvallee.com/animalsGallery.html</link>
+     <title>Animals Gallery</title>
+     <description>Animals Gallery</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://manonvallee.com/landscapeGallery.html</link>
+     <title>Landscape Gallery</title>
+     <description>Landscape Gallery</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://manonvallee.com/index.html</link>
+     <title>Portfolio de Manon Vallée</title>
+     <description>Portfolio de Manon Vallée</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
