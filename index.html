@@ -19,16 +19,37 @@
 
     <!-- ********* Favicon ********* -->
 
-
-    <link rel="apple-touch-icon" sizes="180x180" href="./ressources/favicon/favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./ressources/favicon/favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./ressources/favicon/favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="./ressources/favicon/favicon_package_v0.16/site.webmanifest">
-    <link rel="mask-icon" href="./ressources/favicon/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./ressources/favicon/favicon_package_v0.16/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./ressources/favicon/favicon_package_v0.16/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./ressources/favicon/favicon_package_v0.16/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="./ressources/favicon/favicon_package_v0.16/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="./ressources/favicon/favicon_package_v0.16/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- ********* CSS ********* -->
+
     <link rel="stylesheet" href="/CSS/style.css" />
     <link
       rel="stylesheet"
@@ -40,6 +61,18 @@
       media="only screen and (max-width:700px)"
       href="/CSS/style.mobile.css"
     />
+
+    <!-- ******************** Script mail ********************** -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("-ifSNqX2_T9q8OYxL");
+      })();
+    </script>
 
     <title>Portfolio de Manon Vallée</title>
   </head>
@@ -288,37 +321,44 @@
 
     <footer onclick="closeMenuMobile()">
       <div class="logos">
-        <img
-          class="logo1"
-          src="/ressources/rs/instaGrey.png"
-          alt="logo instagram"
-        />
-        <img
-          class="logo2"
-          src="/ressources/rs/telegramGrey.png"
-          alt="logo telegram"
-        />
-        <img
-          class="logo3"
-          src="/ressources/rs/facebookGrey.png"
-          alt="logo facebook"
-        />
+        <a href="https://t.me/cchuete" target="_blank"
+          ><img
+            class="logo1"
+            src="/ressources/rs/instaGrey.png"
+            alt="logo instagram"
+        /></a>
+        <a href="https://t.me/cchuete" target="_blank"
+          ><img
+            class="logo2"
+            src="/ressources/rs/telegramGrey.png"
+            alt="logo telegram"
+        /></a>
+        <a href="https://t.me/cchuete" target="_blank"
+          ><img
+            class="logo3"
+            src="/ressources/rs/facebookGrey.png"
+            alt="logo facebook"
+        /></a>
       </div>
       <div class="copyright">
-        <p>© 2023 Copyright www.manonvallee.com</p>
+        <p>
+          © 2023 Copyright <a href="www.manonvallee.com">www.manonvallee.com</a>
+        </p>
       </div>
       <div class="borderline">
-        <p>Design with ♥ by <a href="#">Borderline</a></p>
-        <img
-          class="logo4"
-          src="/ressources/rs/githubGrey.png"
-          alt="logo github"
-        />
-        <img
-          class="logo2"
-          src="/ressources/rs/telegramGrey.png"
-          alt="logo telegram"
-        />
+        <p>Design with <span>♥</span> by <a href="#">Borderline</a></p>
+        <a href="https://github.com/vacho35" target="_blank"
+          ><img
+            class="logo4"
+            src="/ressources/rs/githubGrey.png"
+            alt="logo github"
+        /></a>
+        <a href="https://t.me/v4cho" target="_blank"
+          ><img
+            class="logo2"
+            src="/ressources/rs/telegramGrey.png"
+            alt="logo telegram"
+        /></a>
       </div>
       <div
         class="down-button down-button2"

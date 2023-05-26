@@ -195,8 +195,7 @@ header .header__nav__close svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(/ressources/images/b4.png)
-    no-repeat center / cover;
+  background: url(/ressources/images/b4.png) no-repeat center / cover;
   padding: 5rem 0 7rem 0;
 }
 .galleries-container {
@@ -281,8 +280,7 @@ header .header__nav__close svg {
   width: 100%;
   height: auto;
   height: auto;
-  background: url(/ressources/images/slice7.png)
-    no-repeat center / cover;
+  background: url(/ressources/images/slice7.png) no-repeat center / cover;
   background-color: var(--secondary-color);
   color: var(--sixth-color);
   position: relative;
@@ -512,6 +510,9 @@ footer img {
 .rubrics a {
   margin: 1.7rem 0.8rem;
 }
+footer a:hover{
+  color: rgb(105, 226, 226);
+}
 .borderline {
   font-size: clamp(0.3rem, 0.7vw + 0.5rem, 0.8rem);
   display: flex;
@@ -523,6 +524,9 @@ footer img {
 }
 .borderline a {
   color: rgb(164, 164, 164);
+}
+.borderline span{
+  color: red;
 }
 .borderline img {
   width: 28px;

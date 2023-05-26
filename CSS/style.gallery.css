@@ -336,7 +336,6 @@ body.dark .switch {
   width: 83%;
   max-width: 1600px;
   height: 95vh;
-  max-height: 800px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.75);
   display: flex;
@@ -424,7 +423,11 @@ body.dark .switch {
 .arrow-btn:hover {
   color: white;
 }
-
+.output {
+  font-size: clamp(0.6rem, 1vw + 0.8rem, 1.5rem);
+  max-width: 70%;
+  text-align: center;
+}
 .index {
   position: absolute;
   bottom: 10px;

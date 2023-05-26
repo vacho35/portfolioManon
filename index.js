@@ -395,3 +395,27 @@ window.addEventListener("load", loadVisibleImages);
 
 // Charger les images visibles lors du défilement
 window.addEventListener("scroll", loadVisibleImages);
+
+/////////////   Envoi Mail  /////////
+
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_d8tq89d";
+  const templateID = "template_49gf0jq";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Votre message a bien été envoyé !!");
+    })
+    .catch((err) => console.log(err));
+}
