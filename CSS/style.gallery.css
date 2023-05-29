@@ -180,7 +180,7 @@ header .sous-onglets a:hover::after {
   content: url("/ressources/rs/800px-Telegram_Messenger.png");
 }
 .logo3:hover {
-  content: url("/ressources/rs/facebook-logo-3-1.png");
+  content: url("/ressources/rs/twitter.png");
 }
 .logo4:hover {
   content: url("/ressources/rs/github.png");
@@ -222,7 +222,7 @@ header .sous-onglets a:hover::after {
 }
 body.dark {
   --ecriture: #d1d1d1;
-  --fond: #333;
+  background: #333;
   --primary-color: #d1d1d1;
   --secondary-color: #1f363d;
 }

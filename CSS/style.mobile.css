@@ -80,7 +80,7 @@ header .header__nav__close {
   display: block;
   cursor: pointer;
 }
-header .header__nav__close svg{
+header .header__nav__close svg {
   top: 35px;
 }
 .hero {
@@ -257,8 +257,8 @@ header .sous-sous-onglets a {
   height: 100vh;
   border-radius: initial;
 }
-.top-bar{
-  top:10px;
+.top-bar {
+  top: 10px;
 }
 #popup-content {
   max-width: 80%;
